@@ -1,0 +1,36 @@
+﻿@model System.Collections.Generic.List<EmployeeManagmentMvc.Models.Employee>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <td>Name</td>
+        <td>Company</td>
+        <td>Position</td>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Company.Name</td>
+                <td>@item.Position</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+        <a href="employee/index">View Companies</a>
+</div>
+
+</body>
+</html>

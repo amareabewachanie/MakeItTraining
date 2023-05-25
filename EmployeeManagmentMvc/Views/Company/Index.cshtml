@@ -1,0 +1,35 @@
+﻿@model List<Company>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <td>Name</td>
+        <td>Address</td>
+        <td>Country</td>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Address</td>
+                <td>@item.Country</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+<a href="emploee/index">View Emploees</a>
+</body>
+</html>
