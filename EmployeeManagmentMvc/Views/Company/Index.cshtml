@@ -1,7 +1,7 @@
 ﻿@model List<Company>
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
 <!DOCTYPE html>
@@ -12,12 +12,15 @@
 </head>
 <body>
 <div>
-    <table>
+    <table class="table table-bordered">
         <thead>
-        <td>Name</td>
-        <td>Address</td>
-        <td>Country</td>
-        </thead>
+            <tr>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Country</td>
+            <td colspan="2">Actions</td>
+          </tr>
+       </thead>
         <tbody>
         @foreach (var item in Model)
         {
@@ -25,6 +28,12 @@
                 <td>@item.Name</td>
                 <td>@item.Address</td>
                 <td>@item.Country</td>
+                <td>
+                    <a href="/Company/Edit/?id=@item.Id" class="btn btn-info">Edit</a>
+                </td>
+                        <td>
+                            <a href="/Company/Delete/?id=@item.Id" class="btn btn-danger">Delete</a>
+                        </td>
             </tr>
         }
         </tbody>

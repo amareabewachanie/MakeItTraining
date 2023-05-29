@@ -16,7 +16,7 @@ namespace EmployeeManagmentMvc.Controllers
                     Company = new
                         Company
                         {
-                            Id = new Guid(),
+                            Id = 1,
                             Address = "Megenagna, Addis Ababa",
                             Country = "Ethiopia",
                             Name = "MakeIt"
@@ -31,7 +31,7 @@ namespace EmployeeManagmentMvc.Controllers
                     Company = new
                         Company
                         {
-                            Id = new Guid(),
+                            Id = 1,
                             Address = "Megenagna, Addis Ababa",
                             Country = "Ethiopia",
                             Name = "MakeIt"

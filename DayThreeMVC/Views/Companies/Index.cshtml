@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DayThreeMVC.Models.Company>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Country)
+            </th>
+            <th colspan="4">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Address
+            </td>
+            <td>
+                @item.Country
+            </td>
+            <td>
+                <a href="/companies/edit/@item.Id" class="btn btn-info">Edit</a> 
+                <a href="/companies/Details/@item.Id" class="btn btn-primary">Details</a> 
+                <a href="/companies/Delete/@item.Id" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
